@@ -1,0 +1,12 @@
+[package]
+name = "aon-scraper"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+convert_case = "0.8.0"
+headless_chrome = "1.0.17"
+lazy-regex = "3.4.1"
+reqwest = "0.12.19"
+scraper = "0.23.1"
+tokio = { version = "1.45.1", features = ["full"] }
