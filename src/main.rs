@@ -1,8 +1,7 @@
 #![allow(dead_code)]
 
-use std::fmt::Write;
+use std::error::Error;
 use std::time::Duration;
-use std::{collections::HashSet, error::Error};
 
 use convert_case::{Case, Casing};
 use headless_chrome::Browser;
@@ -11,7 +10,8 @@ use scraper::{Html, Selector};
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>>
 {
-	for id in 1..=500
+	// change this range to set what all ids ur gonna try
+	for id in 1..=8000
 	{
 		let contents = get_feat_contents(id)?;
 		let html = Html::parse_fragment(&contents);
